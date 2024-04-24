@@ -16,5 +16,7 @@ class GrammarDetailFragment : Fragment(R.layout.fragment_grammar_detail) {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
+    var altynai = arguments?.getString("str")
+    binding.titleTv.text = altynai
   }
 }

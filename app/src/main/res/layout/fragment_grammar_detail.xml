@@ -6,6 +6,7 @@
     tools:context=".ui.grammar.detail.GrammarDetailFragment">
 
     <TextView
+        android:id="@+id/titleTv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Grammar Detail" />

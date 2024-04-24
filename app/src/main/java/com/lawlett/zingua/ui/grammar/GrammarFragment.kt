@@ -28,6 +28,7 @@ class GrammarFragment : Fragment(R.layout.fragment_grammar),BaseAdapter.IBaseAda
 
   private fun initClickers() {
 
+
   }
 
   override fun onClick(model: GrammarModel, position: Int) {
