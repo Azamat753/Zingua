@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.lawlett.zingua.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:name="com.lawlett.zingua.ui.speaking.SpeakingFragment"
+        android:label="Произношение"
+        tools:layout="@layout/fragment_speaking" />
 
     <fragment
         android:id="@+id/navigation_notifications"
