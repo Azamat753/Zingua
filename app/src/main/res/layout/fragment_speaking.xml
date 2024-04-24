@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:padding="16dp"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
+    tools:context=".ui.speaking.SpeakingFragment">
 
     <Button
         android:id="@+id/btn"
