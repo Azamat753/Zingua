@@ -8,7 +8,7 @@
     tools:context=".ui.grammar.QuizFragment">
 
     <TextView
-        android:id="@+id/voprosTv"
+        android:id="@+id/question_tv"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
