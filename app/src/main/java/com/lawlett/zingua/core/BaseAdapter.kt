@@ -21,6 +21,7 @@ abstract class BaseAdapter<T, Binding : ViewBinding>(
     val binding get() = _binding!!
     var lastPosition: Int = -1
     var positionAdapter: Int = 0
+    var itemPosition: Int = 1
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
         _binding = inflater.invoke(LayoutInflater.from(parent.context), parent, false)
         return BaseViewHolder(binding)
@@ -39,6 +40,7 @@ abstract class BaseAdapter<T, Binding : ViewBinding>(
     override fun getItemCount(): Int = data.size
 
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
+        itemPosition = position + 1
         holder.onBind(data[position])
         setAnimation(holder.itemView, position)
     }

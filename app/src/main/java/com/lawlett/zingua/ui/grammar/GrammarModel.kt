@@ -1,5 +1,20 @@
 package com.lawlett.zingua.ui.grammar
 
-data class GrammarModel (
-  val name:String = "Past Simple"
+import java.io.Serializable
+
+data class GrammarModel(
+    val nameOfTheme: String,
+    val ruleOfCompilation: String,
+    val examples: String,
+    val listQuestionModels: ArrayList<QuestionModel>
+) : Serializable
+
+data class QuestionModel(
+    val question: String,
+    val answers: ArrayList<AnswerModel>
+)
+
+data class AnswerModel(
+    val text: String,
+    val isCorrect: Boolean
 )

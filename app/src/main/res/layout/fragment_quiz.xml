@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.grammar.QuizFragment">
+
+    <TextView
+        android:id="@+id/voprosTv"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/hello_blank_fragment"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp">
+
+        <RadioButton
+            android:id="@+id/first_radioBt"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="10dp"
+            app:buttonTint="@color/l_violet"
+            android:background="@drawable/radius"
+            tools:checked="true"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:text="@string/question"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/second_radioBt"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            app:buttonTint="@color/l_violet"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/radius"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:text="@string/question"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/third_radioBt"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="10dp"
+            app:buttonTint="@color/l_violet"
+            android:background="@drawable/radius"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:text="@string/question"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/four_radioBt"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/radius"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            app:buttonTint="@color/l_violet"
+            android:text="@string/question"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+android:id="@+id/answer_btn"
+        android:layout_width="337dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/crug"
+        android:text="Ответить"
+        android:textColor="#D0BCFF" />
+
+</LinearLayout>

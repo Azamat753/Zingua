@@ -32,5 +32,15 @@
         android:name="com.lawlett.zingua.ui.grammar.detail.GrammarDetailFragment"
         android:label="fragment_grammar_detail"
         tools:layout="@layout/fragment_grammar_detail" />
+    <fragment
+        android:id="@+id/speakingDetailFragment"
+        android:name="com.lawlett.zingua.ui.speaking.SpeakingDetailFragment"
+        android:label="fragment_speaking_detail"
+        tools:layout="@layout/fragment_speaking_detail" />
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.lawlett.zingua.ui.grammar.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" />
 
 </navigation>

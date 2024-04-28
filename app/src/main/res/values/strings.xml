@@ -1,9 +1,31 @@
 <resources>
     <string name="app_name">Zingua</string>
-    <string name="title_home">Home</string>
+    <string name="title_home">Главная</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_grammar">Grammar</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_notifications">Уведомления</string>
+    <string name="title_grammar">Грамматика</string>
+    <string name="hello_blank_fragment">Как образуется отрицание во
+        Future Simple?</string>
+    <string name="Pronunciation">Произношение</string>
+    <string name="pastSimple">"Past simple"
+        - это одно из основных времён в английском языке, используемое для описания действий или состояний, произошедших и завершившихся в прошлом.
+        Образуется оно путём добавления окончаний "-ed" к большинству правильных глаголов (например, "walked", "talked")
+        или путём изменения формы некоторых неправильных глаголов (например, "went", "ate").
+        Также оно используется для описания повторяющихся действий в прошлом.</string>
+    <string name="past_simple">Past Simple</string>
+    <string name="pastsimpleexample">
+
+1. Правильные глаголы:
+   - She walked to the store yesterday. (Она пошла в магазин вчера.)
+   - They talked about their vacation last week. (Они говорили о своем отпуске на прошлой неделе.)
+
+2. Неправильные глаголы:
+   - He went to the cinema last night. (Он пошел в кино вчера вечером.)
+   - She ate pizza for dinner yesterday. (Она поела пиццу на обед вчера.)
+
+3. Повторяющиеся действия в прошлом:
+   - Every morning, he woke up at 7 a.m. (Каждое утро он просыпался в 7 утра.)
+   - They visited their grandparents every summer. (Они навещали своих бабушек и дедушек каждое лето.)</string>
+    <string name="question">При добавлении после глагола
+        will(shall) частицы no</string>
 </resources>
