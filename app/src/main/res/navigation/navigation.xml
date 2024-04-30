@@ -42,5 +42,10 @@
         android:name="com.lawlett.zingua.ui.grammar.QuizFragment"
         android:label="fragment_quiz"
         tools:layout="@layout/fragment_quiz" />
+    <fragment
+        android:id="@+id/finish_Fragment"
+        android:name="com.lawlett.zingua.Finish_Fragment"
+        android:label="fragment_finish_"
+        tools:layout="@layout/fragment_finish_" />
 
 </navigation>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/dialog"
+    android:id="@+id/our_dialog">
+<LinearLayout
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<ImageView
+    android:layout_marginTop="20dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:src="@drawable/vector"/>
+<TextView
+    android:id="@+id/dig_tx"
+    android:layout_marginTop="20dp"
+    android:textColor="@color/pure_white"
+    android:textSize="25sp"
+    android:layout_gravity="center_horizontal"
+    android:text="Идём дальше?"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Certainly_dig_bt"
+        android:layout_marginTop="30dp"
+        android:textColor="#D0BCFF"
+        android:background="@drawable/crug"
+        android:layout_gravity="center_horizontal"
+        android:text="Конечно"
+        android:layout_width="337dp"
+        android:layout_height="40dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/no_dig_bt"
+        android:textColor="#D0BCFF"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/crug"
+        android:text="Нет"
+        android:layout_width="337dp"
+        android:layout_height="40dp"/>
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>
