@@ -7,6 +7,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.lawlett.zingua.R
+import com.lawlett.zingua.core.extensions.createDialog
+import com.lawlett.zingua.databinding.CorrectDialogBinding
 import com.lawlett.zingua.databinding.FragmentQuizBinding
 
 
@@ -49,10 +51,22 @@ class QuizFragment : Fragment(R.layout.fragment_quiz) {
       val check = view?.findViewById<RadioButton>(binding.radioGroup.checkedRadioButtonId)
       val correctAnswer = listQuestionModel[0].answers.single { s -> s.isCorrect }
       if (check?.text == correctAnswer.text) {
+        showDialog()
         Toast.makeText(requireContext(), "Правильно", Toast.LENGTH_SHORT).show()
       } else {
         Toast.makeText(requireContext(), "Не правильно", Toast.LENGTH_SHORT).show()
       }
     }
+  }
+
+  private fun showDialog() {
+    val dialog = requireContext().createDialog(CorrectDialogBinding::inflate)
+    dialog.first.noBtn.setOnClickListener {
+      Toast.makeText(requireContext(), "No", Toast.LENGTH_SHORT).show()
+    }
+    dialog.first.yesBtn.setOnClickListener {
+      Toast.makeText(requireContext(), "Yes", Toast.LENGTH_SHORT).show()
+    }
+    dialog.second.show()
   }
 }
