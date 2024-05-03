@@ -1,6 +1,9 @@
 package com.lawlett.zingua
 
+import android.content.Context
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -31,5 +34,23 @@ class MainActivity : AppCompatActivity() {
     )
     setupActionBarWithNavController(navController, appBarConfiguration)
     navView.setupWithNavController(navController)
+    navController.addOnDestinationChangedListener{_, destination, _->
+      if (destination.id== R.id.quizFragment){
+        navView.visibility = View.GONE
+      } else {
+        navView.visibility = View.VISIBLE
+      }
+
+    }
+    navController.addOnDestinationChangedListener { _, destination, _ ->
+      if (destination.id == R.id.quizFragment || destination.id ==R.id.grammarDetailFragment ||  destination.id ==R.id.resultFragment ) {
+        navView.visibility = View.GONE
+      } else {
+        navView.visibility = View.VISIBLE
+      }
+    }
+
   }
+
+
 }

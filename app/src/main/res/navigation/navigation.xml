@@ -30,7 +30,7 @@
     <fragment
         android:id="@+id/grammarDetailFragment"
         android:name="com.lawlett.zingua.ui.grammar.detail.GrammarDetailFragment"
-        android:label="fragment_grammar_detail"
+        android:label="Грамматика"
         tools:layout="@layout/fragment_grammar_detail" />
     <fragment
         android:id="@+id/speakingDetailFragment"
@@ -39,13 +39,14 @@
         tools:layout="@layout/fragment_speaking_detail" />
     <fragment
         android:id="@+id/quizFragment"
-        android:name="com.lawlett.zingua.ui.grammar.QuizFragment"
-        android:label="fragment_quiz"
+        android:name="com.lawlett.zingua.ui.quiz.QuizFragment"
+        android:label="Викторина"
         tools:layout="@layout/fragment_quiz" />
+
     <fragment
-        android:id="@+id/finish_Fragment"
-        android:name="com.lawlett.zingua.Finish_Fragment"
-        android:label="fragment_finish_"
-        tools:layout="@layout/fragment_finish_" />
+        android:id="@+id/resultFragment"
+        android:name="com.lawlett.zingua.ResultFragment"
+        android:label="Викторина"
+        tools:layout="@layout/fragment_result" />
 
 </navigation>

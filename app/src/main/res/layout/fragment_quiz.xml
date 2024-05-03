@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.grammar.QuizFragment">
+    tools:context=".ui.quiz.QuizFragment">
 
     <TextView
         android:id="@+id/question_tv"
@@ -14,7 +14,7 @@
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
-        android:text="@string/hello_blank_fragment"
+        tools:text="@string/hello_blank_fragment"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -33,7 +33,7 @@
             android:background="@drawable/radius"
             android:paddingHorizontal="10dp"
             android:paddingVertical="8dp"
-            android:text="@string/question"
+            tools:text="@string/question"
             android:textSize="18sp"
             app:buttonTint="@color/l_violet"
             tools:checked="true" />
@@ -47,7 +47,7 @@
             android:background="@drawable/radius"
             android:paddingHorizontal="10dp"
             android:paddingVertical="8dp"
-            android:text="@string/question"
+            tools:text="@string/question"
             android:textSize="18sp"
             app:buttonTint="@color/l_violet" />
 
@@ -60,7 +60,7 @@
             android:background="@drawable/radius"
             android:paddingHorizontal="10dp"
             android:paddingVertical="8dp"
-            android:text="@string/question"
+            tools:text="@string/question"
             android:textSize="18sp"
             app:buttonTint="@color/l_violet" />
 
@@ -73,7 +73,7 @@
             android:background="@drawable/radius"
             android:paddingHorizontal="10dp"
             android:paddingVertical="8dp"
-            android:text="@string/question"
+            tools:text="@string/question"
             android:textSize="18sp"
             app:buttonTint="@color/l_violet" />
     </RadioGroup>
@@ -83,8 +83,8 @@
         android:layout_width="337dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="40dp"
+
+        android:layout_marginTop="150dp"
         android:background="@drawable/crug"
         android:text="Ответить"
         android:textColor="#D0BCFF" />
