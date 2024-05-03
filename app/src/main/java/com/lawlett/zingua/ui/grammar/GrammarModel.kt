@@ -12,9 +12,9 @@ data class GrammarModel(
 data class QuestionModel(
     val question: String,
     val answers: ArrayList<AnswerModel>
-)
+) :Serializable
 
 data class AnswerModel(
     val text: String,
     val isCorrect: Boolean
-)
+) :Serializable
