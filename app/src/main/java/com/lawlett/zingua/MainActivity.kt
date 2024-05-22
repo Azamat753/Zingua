@@ -71,6 +71,7 @@ class MainActivity : AppCompatActivity() {
         super.onBackPressed()
     }
 
+
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
