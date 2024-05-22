@@ -23,6 +23,12 @@
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
     <fragment
+        android:id="@+id/audioFragment"
+        android:name="com.lawlett.zingua.ui.notifications.AudioFragment"
+        android:label="AudioFragment"
+        tools:layout="@layout/fragment_audio"
+        />
+    <fragment
         android:id="@+id/navigation_grammar"
         android:name="com.lawlett.zingua.ui.grammar.GrammarFragment"
         android:label="@string/title_grammar"
@@ -45,8 +51,9 @@
 
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.lawlett.zingua.ResultFragment"
+        android:name="com.lawlett.zingua.ui.result.ResultFragment"
         android:label="Викторина"
         tools:layout="@layout/fragment_result" />
+
 
 </navigation>

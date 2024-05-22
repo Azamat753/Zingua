@@ -6,80 +6,120 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.grammar.detail.GrammarDetailFragment">
 
-    <TextView
-        android:id="@+id/titleTv"
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Grammar Detail" />
+        android:orientation="vertical">
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="550dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/pure_black"
+            app:cardCornerRadius="15dp">
 
-
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <androidx.cardview.widget.CardView
-        app:cardCornerRadius="15dp"
-        android:layout_gravity="center_horizontal"
-        android:backgroundTint="@color/pure_black"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp">
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-        <LinearLayout
-            android:padding="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/past_simple" />
-            <TextView
-                android:textColor="@color/light_violet"
-                android:text="Правила составления"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <TextView
+            <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/pastSimple"
-                android:textSize="15sp" />
-            <TextView
-                android:textColor="@color/light_violet"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Примеры"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/pastsimpleexample"
-                android:textSize="15sp" />
+                android:layout_height="match_parent">
 
-        </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
-    </androidx.cardview.widget.CardView>
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_understend"
-        android:layout_marginTop="30dp"
-        android:textColor="#D0BCFF"
-        android:background="@drawable/crug"
-        android:text="Понял(a)"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="40dp"
-        android:layout_width="337dp"
-        android:layout_height="40dp"/>
-</LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/themeNameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        tools:text="@string/past_simple" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Правила составления"
+                        android:textColor="@color/light_violet" />
+
+                    <TextView
+                        android:id="@+id/rules_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        tools:text="@string/pastSimple" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Примеры"
+                        android:textColor="@color/light_violet" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/exemple"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/examples_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/pastsimpleexample1"
+                        android:textSize="15sp" />
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/exemple1"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/question_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/pastsimpleexample2"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/exemple2"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/negative_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/pastsimpleexample3"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_understend"
+            android:layout_width="337dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/crug"
+            android:text="Понял(a)"
+            android:textColor="#D0BCFF" />
+    </LinearLayout>
 
 </FrameLayout>

@@ -7,6 +7,7 @@
     android:padding="16dp"
     tools:context=".ui.speaking.SpeakingFragment">
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"

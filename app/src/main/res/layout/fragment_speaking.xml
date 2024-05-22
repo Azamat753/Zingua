@@ -1,18 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:padding="16dp"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".ui.speaking.SpeakingFragment">
 
-        <Button
-        android:id="@+id/testBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+       <TextView
+           android:layout_marginStart="15dp"
+           android:textSize="23sp"
+           android:textColor="@color/wh"
+           android:text="Произношение :"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+               />
+       <androidx.cardview.widget.CardView
+           android:layout_marginTop="30dp"
+          app:cardBackgroundColor="#302D38"
+           android:layout_gravity="center"
+           android:layout_width="350dp"
+           android:layout_height="250dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+<LinearLayout
+    android:background="@color/dialog"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="350dp"
+    android:gravity="center_horizontal"
+    android:layout_height="70dp">
+       <ImageView
+           android:layout_gravity="center_vertical"
+           android:src="@drawable/stop_circle"
+           android:layout_width="45dp"
+           android:layout_marginEnd="15dp"
+           android:layout_height="45dp"/>
+       <ImageView
+           android:layout_gravity="center_vertical"
+           android:src="@drawable/play"
+           android:layout_marginStart="15dp"
+           android:layout_width="45dp"
+           android:layout_height="45dp"/>
+
+</LinearLayout>
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/btn_audio_understend"
+           android:layout_width="337dp"
+           android:layout_gravity="center_horizontal"
+           android:layout_height="40dp"
+           android:layout_marginTop="200dp"
+           android:background="@drawable/crug"
+           android:text="Понял(a)"
+           android:textColor="#D0BCFF" />
+
+</LinearLayout>

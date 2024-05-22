@@ -6,10 +6,12 @@ data class GrammarModel(
     val nameOfTheme: String,
     val ruleOfCompilation: String,
     val examples: String,
+    val questionTime: String,
+    val negative: String,
     val listQuestionModels: ArrayList<QuestionModel>
 ) : Serializable
 
-data class QuestionModel(
+data class  QuestionModel(
     val question: String,
     val answers: ArrayList<AnswerModel>
 ) :Serializable

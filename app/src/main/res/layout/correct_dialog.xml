@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="380dp"
-    android:layout_height="320dp"
+    android:layout_height="300dp"
     android:layout_gravity="center_horizontal"
     app:cardBackgroundColor="@color/dialog"
     app:cardCornerRadius="10dp">
@@ -15,21 +15,21 @@
         android:padding="16dp">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:src="@drawable/vector" />
+            android:src="@drawable/galochka" />
 
         <TextView
             android:id="@+id/dig_tx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:text="Идём дальше?"
             android:textColor="@color/pure_white"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
 
         <androidx.appcompat.widget.AppCompatButton

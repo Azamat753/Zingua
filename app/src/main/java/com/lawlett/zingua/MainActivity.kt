@@ -11,43 +11,67 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.lawlett.zingua.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var navController: NavController
+    private lateinit var binding: ActivityMainBinding
 
-  private lateinit var binding: ActivityMainBinding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-    binding = ActivityMainBinding.inflate(layoutInflater)
-    setContentView(binding.root)
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
+        navController = navHostFragment.navController
 
-    val navView: BottomNavigationView = binding.navView
+        val navView: BottomNavigationView = binding.navView
+        navView.setupWithNavController(navController)
 
-    val navController = findNavController(R.id.nav_host_fragment_activity_main)
-    // Passing each menu ID as a set of Ids because each
-    // menu should be considered as top level destinations.
-    val appBarConfiguration = AppBarConfiguration(
-      setOf(
-        R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
-      )
-    )
-    setupActionBarWithNavController(navController, appBarConfiguration)
-    navView.setupWithNavController(navController)
-    navController.addOnDestinationChangedListener{_, destination, _->
-      if (destination.id== R.id.quizFragment){
-        navView.visibility = View.GONE
-      } else {
-        navView.visibility = View.VISIBLE
-      }
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+            )
+        )
 
+        setupActionBarWithNavController(navController, appBarConfiguration)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            val actionBar = supportActionBar
+            when (destination.id) {
+                R.id.navigation_grammar, R.id.navigation_home, R.id.navigation_notifications, R.id.navigation_dashboard, R.id.resultFragment -> {
+                    actionBar?.setDisplayHomeAsUpEnabled(false) // Убрать стрелку "Назад"
+                }
+                else -> {
+                    actionBar?.setDisplayHomeAsUpEnabled(false) // Показать стрелку "Назад" на других экранах
+                }
+            }
+        }
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            navView.visibility = when (destination.id) {
+                R.id.quizFragment, R.id.grammarDetailFragment, R.id.resultFragment-> View.GONE
+                else -> View.VISIBLE
+            }
+        }
     }
-    navController.addOnDestinationChangedListener { _, destination, _ ->
-      if (destination.id == R.id.quizFragment || destination.id ==R.id.grammarDetailFragment ||  destination.id ==R.id.resultFragment ) {
-        navView.visibility = View.GONE
-      } else {
-        navView.visibility = View.VISIBLE
-      }
+
+    override fun onBackPressed() {
+
+        val currentFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment_activity_main)
+            ?.childFragmentManager
+            ?.primaryNavigationFragment
+
+
+        if (currentFragment is ResultFragment) {
+            // Игнорируем нажатие кнопки "Назад"
+            return
+        }
+
+        super.onBackPressed()
     }
-  }
 
-
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
 }

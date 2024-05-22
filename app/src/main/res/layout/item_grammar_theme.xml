@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/item_line_rds"
     android:orientation="horizontal"
     android:layout_marginBottom="16dp"
@@ -23,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Past Simple"
+        tools:text="Past Simple"
         android:textColor="@color/pure_white"
         android:textSize="16sp" />
 </LinearLayout>

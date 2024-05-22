@@ -2,7 +2,7 @@
     <string name="app_name">Zingua</string>
     <string name="title_home">Главная</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Уведомления</string>
+    <string name="title_notifications">Аудио</string>
     <string name="title_grammar">Грамматика</string>
     <string name="hello_blank_fragment">Как образуется отрицание во
         Future Simple?</string>
@@ -13,19 +13,27 @@
         или путём изменения формы некоторых неправильных глаголов (например, "went", "ate").
         Также оно используется для описания повторяющихся действий в прошлом.</string>
     <string name="past_simple">Past Simple</string>
-    <string name="pastsimpleexample">
-
-1. Правильные глаголы:
-   - She walked to the store yesterday. (Она пошла в магазин вчера.)
-   - They talked about their vacation last week. (Они говорили о своем отпуске на прошлой неделе.)
-
-2. Неправильные глаголы:
-   - He went to the cinema last night. (Он пошел в кино вчера вечером.)
-   - She ate pizza for dinner yesterday. (Она поела пиццу на обед вчера.)
-
-3. Повторяющиеся действия в прошлом:
-   - Every morning, he woke up at 7 a.m. (Каждое утро он просыпался в 7 утра.)
-   - They visited their grandparents every summer. (Они навещали своих бабушек и дедушек каждое лето.)</string>
     <string name="question">При добавлении после глагола
         will(shall) частицы no</string>
+    <string name="pastsimple">Past Simple - простое прошедшее время
+    Время Past Simple используется для обозначения действия, которое произошло в определенное время в прошлом и время совершения которого уже истекло.
+    Для того, чтобы поставить английский глагол во время Past Simple, нужно использовать его «вторую форму». Для большинства глаголов она образуется прибавлением окончания -ed:</string>
+    <string name="exemple">Утвердительные предложения:</string>
+    <string name="exemple1">Вопросительные предложения:</string>
+    <string name="exemple2">Отрицательные предложения:</string>
+    <string name="pastsimpleexample1">I played - We played\nYou played-You played\nHe / she / it played\nThey played</string>
+    <string name="pastsimpleexample2">Did I play? - Did we play?\nDid you play? - Did you play?\nDid he / she / it play?\nDid they play?</string>
+    <string name="pastsimpleexample3">I did not play - We did not play\nYou did not play - You did not play\nHe / she / it did not play\nThey did not play</string>
+    <string name="rule_of_present_simple">Время Present Simple обозначает действие в настоящем в широком смысле слова. Оно употребляется для обозначения обычных, регулярно повторяющихся или постоянных действий, например, когда мы говорим о чьих-либо привычках, режиме дня, расписании и т. д., т. е. Present Simple обозначает действия, которые происходят в настоящее время, но не привязаны именно к моменту речи.</string>
+    <string name="present_simple_examples1">I play	We play\nYou play	You play\nHe / she / it plays\nThey play
+</string>
+    <string name="presentquestiontime">Do I play? - Do we play?\nDo you play? Do you play?\nDoes he / she / it play?\nDo they play?
+</string>
+    <string name="negativepresent">I do not play - We do not play\nYou do not play	- You do not play\nHe / she / it does not play\nThey do not play</string>
+    <string name="rule_of_future_simple">Время Future Simple ссылается на действие, которое совершится в неопределенном или отдаленном будущем.</string>
+    <string name="future_simple_examples">I will play - We will play\nYou will play - You will play\nHe / she / it will play\nThey will play</string>
+    <string name="questionfuture">Will I play? - Will we play?\nWill you play? - Will you play?\nWill he / she / it play?\nWill they play?
+</string>
+    <string name="negativefuture">I will not play - We will not play\nYou will not play	- You will not play\nHe / she / it will not play\nThey will not play
+</string>
 </resources>
