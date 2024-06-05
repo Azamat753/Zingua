@@ -19,12 +19,12 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.lawlett.zingua.ui.notifications.NotificationsFragment"
+        android:name="com.lawlett.zingua.ui.listen.ListenFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_listen" />
     <fragment
         android:id="@+id/audioFragment"
-        android:name="com.lawlett.zingua.ui.notifications.AudioFragment"
+        android:name="com.lawlett.zingua.ui.listen.AudioFragment"
         android:label="AudioFragment"
         tools:layout="@layout/fragment_audio"
         />

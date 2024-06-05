@@ -13,7 +13,9 @@ data class GrammarModel(
 
 data class  QuestionModel(
     val question: String,
-    val answers: ArrayList<AnswerModel>
+    val answers: ArrayList<AnswerModel>,
+    val audio : Int?=null
+
 ) :Serializable
 
 data class AnswerModel(

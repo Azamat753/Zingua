@@ -1,4 +1,4 @@
-package com.lawlett.zingua.ui.notifications
+package com.lawlett.zingua.ui.listen
 
 import com.lawlett.zingua.R
 import com.lawlett.zingua.core.BaseAdapter
@@ -11,6 +11,6 @@ class AudioThemeAdapter : BaseAdapter<AudioModel,ItemGrammarThemeBinding>(
 ){
     override fun onBind(binding: ItemGrammarThemeBinding, model: AudioModel) {
         binding.titleTv.text=model.nameTheme
-        binding.itNum.text= model.toString()
+        binding.itNum.text= itemPosition.toString()
     }
 }

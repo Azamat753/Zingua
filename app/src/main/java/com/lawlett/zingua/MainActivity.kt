@@ -3,7 +3,8 @@ package com.lawlett.zingua
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
@@ -55,21 +56,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-
-        val currentFragment = supportFragmentManager
-            .findFragmentById(R.id.nav_host_fragment_activity_main)
-            ?.childFragmentManager
-            ?.primaryNavigationFragment
-
-
-        if (currentFragment is ResultFragment) {
-            // Игнорируем нажатие кнопки "Назад"
-            return
-        }
-
-      //  super.onBackPressed()
-    }
 
 
     override fun onSupportNavigateUp(): Boolean {

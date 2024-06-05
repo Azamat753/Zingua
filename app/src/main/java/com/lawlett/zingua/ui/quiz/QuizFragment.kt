@@ -18,32 +18,26 @@ import com.lawlett.zingua.databinding.FragmentQuizBinding
 import com.lawlett.zingua.databinding.WrongDialogBinding
 import com.lawlett.zingua.ui.grammar.GrammarModel
 import com.lawlett.zingua.ui.grammar.QuestionModel
-import com.lawlett.zingua.ui.notifications.AudioModel
-import com.lawlett.zingua.ui.notifications.AudioModelList
+import com.lawlett.zingua.ui.listen.AudioModel
 import com.lawlett.zingua.ui.quiz.model.ResultQuizModel
 
 class QuizFragment : Fragment(R.layout.fragment_quiz) {
     private val binding: FragmentQuizBinding by viewBinding()
-
-    //index
     private var listQuestionModel = arrayListOf<QuestionModel>()
-    private var audioModelList = arrayListOf<AudioModelList>()
+    private var audioModel: AudioModel? = null
     val currentDate = getCurrentDateTime()
-
     var level = 0
     var listSize = 0
     var rightAnswerAmount = 0
     var wrongAnswerAmount = 0
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val audioModel = arguments?.getSerializable("audio") as? AudioModel
+        audioModel = arguments?.getSerializable("audio") as? AudioModel
         val model = arguments?.getSerializable("grammar") as? GrammarModel
-        if (model != null) {
-            listQuestionModel = model.listQuestionModels
-        }
-        if (audioModel!=null){
-            audioModelList= audioModel.audioQuestionModel
+        listQuestionModel = when {
+            model != null -> ArrayList(model.listQuestionModels)
+            audioModel != null -> ArrayList(audioModel!!.listQuestionModels)
+            else -> arrayListOf()
         }
         initClickers()
 
@@ -104,8 +98,14 @@ class QuizFragment : Fragment(R.layout.fragment_quiz) {
     private fun showDialog() {
         val dialog = requireContext().createDialog(CorrectDialogBinding::inflate)
         dialog.first.yesBtn.setOnClickListener {
-            Toast.makeText(requireContext(), "Так держать!!!", Toast.LENGTH_SHORT).show()
-            updateQuestion(listQuestionModel)
+            if (audioModel != null) {
+                val bundle = Bundle()
+                bundle.putSerializable("audio", audioModel)
+                findNavController().navigate(R.id.audioFragment, bundle)
+            } else {
+                Toast.makeText(requireContext(), "Так держать!!!", Toast.LENGTH_SHORT).show()
+                updateQuestion(listQuestionModel)
+            }
             dialog.second.dismiss()
         }
 
@@ -115,7 +115,7 @@ class QuizFragment : Fragment(R.layout.fragment_quiz) {
                 allQuestion = levelUpd.toString(),
                 rightAnswer = rightAnswerAmount.toString(),
                 wrongAnswer = wrongAnswerAmount.toString(),
-                )
+            )
             openResult(resultModel)
             dialog.second.dismiss()
         }

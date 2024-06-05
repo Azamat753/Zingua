@@ -2,7 +2,7 @@
     <string name="app_name">Zingua</string>
     <string name="title_home">Главная</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Аудио</string>
+    <string name="title_notifications">Слух</string>
     <string name="title_grammar">Грамматика</string>
     <string name="hello_blank_fragment">Как образуется отрицание во
         Future Simple?</string>

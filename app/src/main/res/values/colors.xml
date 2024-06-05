@@ -9,5 +9,9 @@
     <color name="l_violet">#D0BCFF</color>
     <color name="dialog">#4A4458</color>
     <color name="Quotes">#969696</color>light_violet
-    <color name="wh">#E6E0E9</color>l
-</resources>
+    <color name="wh">#E6E0E9</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#43A047</color>
+<color name="shuffleOnColor">#FFA500</color>
+    <color name="shuffle0ffColor">#808080</color>
+ </resources>
