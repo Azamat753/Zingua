@@ -1,5 +1,7 @@
 [versions]
 agp = "8.3.1"
+audiovisualizer = "0.9.2"
+dexter = "6.2.3"
 glide = "4.12.0"
 kotlin = "1.9.0"
 coreKtx = "1.12.0"
@@ -21,6 +23,8 @@ viewbindingpropertydelegateFull = "1.5.9"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-recyclerview = { module = "androidx. recyclerview:recyclerview", version.ref = "recyclerview" }
+audiovisualizer = { module = "com.gauravk.audiovisualizer:audiovisualizer", version.ref = "audiovisualizer" }
+dexter = { module = "com.karumi:dexter", version.ref = "dexter" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
